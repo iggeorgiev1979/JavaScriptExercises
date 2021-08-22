@@ -16,8 +16,6 @@ function manipulate(a, b){
             let el = arr.shift();
             arr.push(el);
         }
-        // arr.push(...arr.slice(0, positions));
-        // arr.splice(0, positions);
     }
 
     function sum(){
@@ -66,6 +64,6 @@ function manipulate(a, b){
                 return `[ ${arr.join(", ")} ]`;
         }
     }
-    // return `[ ${arr.join(", ")} ]`
+    
 }
 console.log(manipulate([2, 2, 4, 2, 4], ["add 7 4", "sumPairs", "remove 11", "print"]))
