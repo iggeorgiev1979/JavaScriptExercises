@@ -5,7 +5,7 @@ function solve(arg){
         for (index = 0; index < rows; index++){
             newMatrix.push(Array(columns).fill(0));
         }
-        newMatrix[currentPosition[0]][currentPosition[1]] = 1
+        newMatrix[maze[0]][maze[1]] = 1
         return newMatrix;
     }
 
@@ -17,8 +17,8 @@ function solve(arg){
 
     function fillLeft(){
         let num = 2;
-        let x = currentPosition[0];
-        let y = currentPosition[1];
+        let x = maze[0];
+        let y = maze[1];
         let length = matrix.length; 
         if (y >= 1){
             for(let index = y -1; index >= 0; index--){
@@ -44,8 +44,8 @@ function solve(arg){
 
     function fillDown(){
         let num = 2;
-        let x = currentPosition[0];
-        let y = currentPosition[1];
+        let x = maze[0];
+        let y = maze[1];
         let length = matrix.length;
         let rowLength = matrix[0].length;
         if(x < length - 1){
@@ -73,8 +73,8 @@ function solve(arg){
     function fillRight(){
         let num = 2;
         let length = matrix[0].length;
-        let x = currentPosition[0];
-        let y = currentPosition[1];
+        let x = maze[0];
+        let y = maze[1];
         let columnLength = matrix.length;
         if (y < length - 1){
             for (let index = y + 1; index < length; index++){
@@ -104,8 +104,8 @@ function solve(arg){
 
     function fillUp(){
         let num = 2;
-        let x = currentPosition[0];
-        let y = currentPosition[1];
+        let x = maze[0];
+        let y = maze[1];
         let length = matrix[0].length;
         if (x > 0){
             for (index = x -1; index >= 0; index--){
@@ -131,7 +131,7 @@ function solve(arg){
 
     let rows = arg[0];
     let columns = arg[1];
-    let currentPosition = [arg[2], arg[3]];
+    let maze = [arg[2], arg[3]];
     let matrix = generateMatrix(rows, columns);
     fillRight();
     fillLeft();
