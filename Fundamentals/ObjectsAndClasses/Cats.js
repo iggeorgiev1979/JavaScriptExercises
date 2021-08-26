@@ -5,13 +5,15 @@ function solve(arr){
             this.name = name;
             this.age = age;
         }
+        print(){
+            console.log(`${this.name}, age ${this.age} says Meow`);
+        }
     }
 
     for(let el of arr){
         let [name, age] = el.split(" ")
         newCat = new Cat(name, age);
-
-        console.log(`${newCat.name}, age ${newCat.age} says Meow`)
+        newCat.print();
     }
     
 }
