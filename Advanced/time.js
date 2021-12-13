@@ -48,7 +48,7 @@ class Time{
         return `${this.stringify(this.hours)}:${this.stringify(this.minutes)}:${this.stringify(this.seconds)}`
     }
 }
-
+                    
 let tt = new Time(28, 59, 120)
 console.log(tt.get_time());
 
